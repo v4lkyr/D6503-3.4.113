@@ -145,3 +145,6 @@ obj-$(CONFIG_CORESIGHT)		+= coresight/
 
 obj-$(CONFIG_BIF)		+= bif/
 obj-$(CONFIG_SENSORS)		+= sensors/
+
+# SOC specific infrastructure drivers.
+obj-y				+= soc/
