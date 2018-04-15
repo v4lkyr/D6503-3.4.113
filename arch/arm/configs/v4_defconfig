@@ -605,6 +605,15 @@ CONFIG_ARM_GIC=y
 # CONFIG_FIQ_DEBUGGER is not set
 
 #
+# New Features
+#
+
+#
+# Graphics
+#
+CONFIG_FB_MSM_MDSS_KCAL_CTRL=y
+
+#
 # Bus support
 #
 # CONFIG_PCI_SYSCALL is not set
