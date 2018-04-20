@@ -1512,6 +1512,9 @@ config FB_MSM_MDSS_KCAL_CTRL
 	  Enable sysfs for rgb/lut control for mdss-mdp display controllers
 	  in the MDSS sub-system.
 endmenu
+menu "Hotplugs"
+source "arch/arm/hotplug/Kconfig"
+endmenu
 endmenu
 
 menu "Bus support"
