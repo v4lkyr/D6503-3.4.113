@@ -72,7 +72,7 @@ struct krait_vreg_pmic_chip {
 
 static struct krait_vreg_pmic_chip *the_chip;
 
-static struct of_device_id krait_vreg_pmic_match_table[] __initdata = {
+static struct of_device_id krait_vreg_pmic_match_table[] = {
 	{ .compatible = KRAIT_REG_PMIC_DEV_NAME },
 	{}
 };
@@ -388,7 +388,7 @@ static int __devinit krait_vreg_pmic_probe(struct spmi_device *spmi)
 	return 0;
 }
 
-static struct spmi_driver qpnp_revid_driver = {
+static struct spmi_driver qpnp_revid_driver __refdata = {
 	.probe	= krait_vreg_pmic_probe,
 	.driver	= {
 		.name		= KRAIT_REG_PMIC_DEV_NAME,

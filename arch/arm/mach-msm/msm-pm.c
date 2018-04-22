@@ -1010,12 +1010,12 @@ static int msm_cpu_status_probe(struct platform_device *pdev)
 	return 0;
 };
 
-static struct of_device_id msm_slp_sts_match_tbl[] __initdata= {
+static struct of_device_id msm_slp_sts_match_tbl[] = {
 	{.compatible = "qcom,cpu-sleep-status"},
 	{},
 };
 
-static struct platform_driver msm_cpu_status_driver = {
+static struct platform_driver msm_cpu_status_driver __refdata = {
 	.probe = msm_cpu_status_probe,
 	.driver = {
 		.name = "cpu_slp_status",
@@ -1024,12 +1024,12 @@ static struct platform_driver msm_cpu_status_driver = {
 	},
 };
 
-static struct of_device_id msm_snoc_clnt_match_tbl[] __initdata = {
+static struct of_device_id msm_snoc_clnt_match_tbl[] = {
 	{.compatible = "qcom,pm-snoc-client"},
 	{},
 };
 
-static struct platform_driver msm_cpu_pm_snoc_client_driver = {
+static struct platform_driver msm_cpu_pm_snoc_client_driver __refdata = {
 	.probe = msm_pm_snoc_client_probe,
 	.driver = {
 		.name = "pm_snoc_client",
@@ -1291,12 +1291,12 @@ static int msm_cpu_pm_probe(struct platform_device *pdev)
 	return ret;
 }
 
-static struct of_device_id msm_cpu_pm_table[] __initdata = {
+static struct of_device_id msm_cpu_pm_table[] = {
 	{.compatible = "qcom,pm-8x60"},
 	{},
 };
 
-static struct platform_driver msm_cpu_pm_driver = {
+static struct platform_driver msm_cpu_pm_driver __refdata = {
 	.probe = msm_cpu_pm_probe,
 	.driver = {
 		.name = "pm-8x60",

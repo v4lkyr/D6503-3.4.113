@@ -1323,7 +1323,7 @@ static int __devinit msm_rpm_smd_remote_probe(struct platform_device *pdev)
 	return 0;
 }
 
-static struct platform_driver msm_rpm_smd_remote_driver = {
+static struct platform_driver msm_rpm_smd_remote_driver __refdata = {
 	.probe = msm_rpm_smd_remote_probe,
 	.driver = {
 		.owner = THIS_MODULE,
@@ -1403,12 +1403,12 @@ fail:
 	return -EINVAL;
 }
 
-static struct of_device_id msm_rpm_match_table[] __initdata =  {
+static struct of_device_id msm_rpm_match_table[] =  {
 	{.compatible = "qcom,rpm-smd"},
 	{},
 };
 
-static struct platform_driver msm_rpm_device_driver = {
+static struct platform_driver msm_rpm_device_driver __refdata = {
 	.probe = msm_rpm_dev_probe,
 	.driver = {
 		.name = "rpm-smd",
